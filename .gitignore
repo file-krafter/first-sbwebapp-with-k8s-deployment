@@ -1,0 +1,77 @@
+# Java
+*.class
+*.jar
+*.war
+*.ear
+
+# Maven
+target/
+dependency-reduced-pom.xml
+release.properties
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+mvnw
+mvnw.cmd
+
+# Gradle (if used later)
+.gradle
+build/
+!gradle-wrapper.jar
+
+# IntelliJ / STS / Eclipse
+.idea/
+*.iws
+*.ipr
+*.iml
+.project
+.classpath
+.settings/
+.springBeans
+out/
+
+# OS
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+
+# Logs & temp
+*.log
+*.tmp
+*.swp
+*.bak
+/logs/
+
+# Test output
+test-output/
+
+# VS Code
+.vscode/
+
+# Coverage / reports
+jacoco.exec
+coverage/
+.coverage
+
+# Spring Boot
+.spring-boot-devtools.properties
+
+# Git merge conflict backups
+**/*.orig
+
+# Env/config
+.env
+
+# Frontend (in case)
+node_modules/
+dist/
+
+# Ignore servlet webapp files
+**/src/main/webapp/
+
+# Ignore JVM and Maven config files
+jvm.config
+maven.config
+mvn
+[Help
