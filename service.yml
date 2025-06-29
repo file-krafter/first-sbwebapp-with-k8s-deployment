@@ -1,12 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: springboot-service
+  name: ingress-nginx-service
+  namespace: my-ingress-namespace
 spec:
-  type: NodePort
   selector:
-    app: springboot-k8s-app
+    app: ingress-nginx-controller
   ports:
-    - port: 8080
+    - port: 80 # keeping service port as 80
       targetPort: 8080
-      nodePort: 30036  # Accessible on this port via minikube IP

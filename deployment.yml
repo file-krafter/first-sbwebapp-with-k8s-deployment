@@ -1,20 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: springboot-k8s-app
+  name: nginx-ingress
+  namespace: my-ingress-namespace
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: springboot-k8s-app
+      app: ingress-nginx-controller
   template:
     metadata:
       labels:
-        app: springboot-k8s-app
+        app: ingress-nginx-controller
     spec:
       containers:
         - name: springboot-container
-          image: filekrafter95/springboot-k8s-demo:1.0
+          image: filekrafter95/springboot-k8s-ingress-nginx-controller:v1.0
           ports:
             - containerPort: 8080
           imagePullPolicy: Always

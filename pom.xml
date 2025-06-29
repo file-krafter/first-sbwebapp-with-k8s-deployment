@@ -5,11 +5,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.k8s.deployment</groupId>
-  <artifactId>first-sbwebapp-with-k8s-deployment</artifactId>
+  <artifactId>ingress-nginx-controller</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>war</packaging>
 
-  <name>first-sbwebapp-with-k8s-deployment Maven Webapp</name>
+  <name>ingress-nginx-controller Maven Webapp</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
