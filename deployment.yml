@@ -14,7 +14,7 @@ spec:
         app: ingress-nginx-controller
     spec:
       containers:
-        - name: springboot-container
+        - name: nginx-ingress-container
           image: filekrafter95/springboot-k8s-ingress-nginx-controller:v1.0
           ports:
             - containerPort: 8080

@@ -1,0 +1,25 @@
+# nginx-ingress controller with two services path base
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+name: nginx-ingress-test
+namespace: my-ingress-namespace
+spec:
+  rules:
+  - host: ingress.hostbase.com
+    http:
+      paths:
+      - path: /common-api
+        pathType: Prefix
+        backend:
+          service:
+            name: ingress-nginx-service
+            port:
+              number: 91
+      - path: /api
+        pathType: Prefix
+        backend:
+          service:
+            name: springboot-service-for-k8s
+            port:
+              number: 80
