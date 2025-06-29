@@ -7,5 +7,5 @@ spec:
   selector:
     app: ingress-nginx-controller
   ports:
-    - port: 80 # keeping service port as 80
+    - port: 91 # keeping service port as 91
       targetPort: 8080
