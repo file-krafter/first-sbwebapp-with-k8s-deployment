@@ -4,17 +4,11 @@ metadata:
   name: nginx-ingress-test
   namespace: my-ingress-namespace
 spec:
+  ingressClassName: nginx   # this tell K8s which controller should handle this Ingress
   rules:
     - host: ingress.hostbase.com
       http:
         paths:
-          - path: /common-api
-            pathType: Prefix
-            backend:
-              service:
-                name: ingress-nginx-service
-                port:
-                  number: 91
           - path: /api
             pathType: Prefix
             backend:
@@ -22,3 +16,10 @@ spec:
                 name: springboot-service-for-k8s
                 port:
                   number: 80
+          - path: /common-api
+            pathType: Prefix
+            backend:
+              service:
+                name: ingress-nginx-service
+                port:
+                  number: 91
